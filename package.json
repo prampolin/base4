@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev && json-server --watch --port 3004 src/mocks/db.json",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
