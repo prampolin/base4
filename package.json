@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev && json-server --watch --port 3004 src/mocks/db.json",
+    "dev:orval": "next dev && npm run orval && json-server --watch --port 3004 src/mocks/db.json",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "orval": "orval --config ./orval.config.cjs"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.1.1",
@@ -19,6 +21,7 @@
     "@types/react": "18.2.15",
     "@types/react-dom": "18.2.7",
     "autoprefixer": "10.4.14",
+    "axios": "^1.4.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
     "eslint": "8.45.0",
@@ -38,5 +41,8 @@
     "tailwindcss-animate": "^1.0.6",
     "typescript": "5.1.6",
     "zod": "^3.21.4"
+  },
+  "devDependencies": {
+    "orval": "^6.17.0"
   }
 }
